@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolledUp, setIsScrolledUp] = useState(false);
+  const [isScrolledUp, setIsScrolledUp] = useState(true);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -24,7 +24,7 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full transition-all duration-300 ${
-        isScrolledUp ? "bg-transparent" : "bg-black"
+        isScrolledUp ? "bg-black" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
@@ -51,7 +51,7 @@ export const Header = () => {
           <Link
             to="/home"
             className={`text-sm font-semibold transition-colors ${
-              isScrolledUp ? "text-gray-900" : "text-white"
+              isScrolledUp ? "text-white" : "text-gray-900"
             }`}
           >
             Home
@@ -59,7 +59,7 @@ export const Header = () => {
           <Link
             to="/services"
             className={`text-sm font-semibold transition-colors ${
-              isScrolledUp ? "text-gray-900" : "text-white"
+              isScrolledUp ? "text-white" : "text-gray-900"
             }`}
           >
             Services
@@ -67,7 +67,7 @@ export const Header = () => {
           <Link
             to="/aboutus"
             className={`text-sm font-semibold transition-colors ${
-              isScrolledUp ? "text-gray-900" : "text-white" /*  */
+              isScrolledUp ? "text-white" : "text-gray-900" /*  */
             }`}
           >
             About Us
@@ -75,7 +75,7 @@ export const Header = () => {
           <Link
             to="contactus"
             className={`text-sm font-semibold transition-colors ${
-              isScrolledUp ? "text-gray-900" : "text-white"
+              isScrolledUp ? "text-white" : "text-gray-900"
             }`}
           >
             Contact Us
