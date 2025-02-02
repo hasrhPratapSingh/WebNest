@@ -1,3 +1,3 @@
 export const Main = () => {
-  return <div>Hello From main</div>;
+  return <div className=" flex-1 pt-20"></div>;
 };
