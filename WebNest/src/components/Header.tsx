@@ -49,7 +49,7 @@ export const Header = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
-            to="/home"
+            to="/"
             className={`text-sm font-semibold transition-colors ${
               isScrolledUp ? "text-white" : "text-gray-900"
             }`}
